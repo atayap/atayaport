@@ -1,0 +1,163 @@
+:root {
+    --mainColor: #000;
+    --acsentColor: #6ac045;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Tambahkan font Poppins untuk semua elemen */
+}
+
+/* Style Body */
+body {
+    background-color: var(--mainColor);
+    min-height: 900px;
+    font-weight: 400; /* Bobot normal untuk teks default */
+    color: #fff; /* Warna teks default putih */
+}
+
+/* Style Heading */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Heading menggunakan bobot tebal */
+    color: var(--acsentColor); /* Warna aksen untuk heading */
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Style Paragraf */
+p {
+    font-weight: 300; /* Paragraf menggunakan bobot ringan */
+    font-size: 1rem; /* Ukuran teks paragraf */
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Style Tombol */
+.btn-custom-white {
+    font-size: 1rem;
+    font-weight: 600; /* Tombol menggunakan bobot semi-bold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--mainColor);
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom-white:hover {
+    background-color: var(--acsentColor);
+    color: #fff;
+}
+
+.material-symbols-outlined {
+    font-size: 1.2rem; /* Sesuaikan ukuran ikon */
+    display: inline-block;
+    vertical-align: middle; /* Pastikan ikon vertikal sejajar */
+}
+
+/* Portfolio Section */
+#portfolio {
+    color: #fff;
+}
+
+#portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--acsentColor);
+}
+
+#portfolio .portfolio-item {
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+#portfolio .portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+#portfolio .portfolio-info {
+    padding: 20px;
+    background-color: #333;
+}
+
+#portfolio .portfolio-info h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--acsentColor);
+}
+
+#portfolio .portfolio-info p {
+    font-size: 1rem;
+    color: #ccc;
+}
+    
+/* Skill Section */
+#skills {
+    background-color: #fff;
+    padding-top: 3rem; /* Mengurangi padding atas untuk mengurangi celah */
+    padding-bottom: 3rem; /* Mengurangi padding bawah untuk menyatukan dengan portfolio */
+}
+
+#skills h2 {
+    font-size: 2rem;
+    color: var(--acsentColor);
+    margin-bottom: 3rem;
+}
+
+.skill-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsif untuk mobile view */
+@media (max-width: 768px) {
+    /* Mengatur layout pada tampilan mobile */
+    #hero .container .row {
+        flex-direction: column-reverse; /* Menukar urutan kolom agar gambar berada di atas teks */
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Sesuaikan ukuran gambar pada mobile */
+    #hero img {
+        width: 250px; /* Sesuaikan ukuran gambar */
+        height: 250px; /* Sesuaikan ukuran gambar */
+        margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+    }
+
+    /* Mengatur ukuran teks untuk tampilan mobile */
+    #hero h2 {
+        font-size: 1.5rem; /* Ukuran font untuk heading */
+    }
+
+    #portfolio .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #portfolio .portfolio-item {
+        width: 100%;
+    }
+
+    .skill-logo {
+        width: 80%; /* Adjust size of the images for larger screens */
+    }
+
+    .col-sm-6 {
+        text-align: center; /* Center images on small screens */
+    }
+}
